@@ -1,4 +1,4 @@
-Stock Management System - Flask
+Grocery Procurment Management System - Flask
 =====================
 
 This simple website acts as an simple warehouse managment system involving supplier,grocery dept and purchase dept.
