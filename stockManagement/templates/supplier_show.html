@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Warehouse Management</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css"/>
+    <script src="../static/js/jquery-1.11.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+</head>
+<body>
+    {% include 'includes/pagenav.html' %}
+
+    <div class="container" role="main" style="margin-top: 50pt;">
+        <div class="jumbotron">
+            <p> Product name : {{ product.name }}</p>
+            <p> Quanitiy available with us :  {{product.quantity}} </p>
+            <form method="POST", action="/accept_proposal">
+            <input type="hidden" name="{{product.p_id}}" value="{{product.p_id}}">
+            <input type="submit" class="btn btn-success" name="required" value="Accept Order?">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

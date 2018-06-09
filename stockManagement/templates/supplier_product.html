@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Warehouse Management</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css"/>
+    <script src="../static/js/jquery-1.11.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+</head>
+<body>
+    {% include 'includes/pagenav.html' %}
+
+    <div class="container" role="main" style="margin-top: 50pt;">
+        <div class="jumbotron">
+            <p> Product name : {{ product.name }}</p>
+            <p> Quanitiy required by store:  {{product.quantity}} </p>
+            <form role="form" method="POST", action="/supplier_accept">
+            <input type="text" class="form-control" id="s_id" name="s_id" value="Supplier ID"> <br> <br>
+            <input type="hidden" name="{{product.name}}" value="{{product.name}}">
+            <input type="text" class="form-control" id="price" name="price" value="Price"> <br> <br>
+            <input type="text" class="form-control" id="quantity" name="quantity" value="Quantity"> <br> <br>
+            <button type="submit" class="btn btn-success">Submit rfq?</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

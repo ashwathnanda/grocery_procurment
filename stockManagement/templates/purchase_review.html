@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Warehouse Management</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css"/>
+    <script src="../static/js/jquery-1.11.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+</head>
+<body>
+    {% include 'includes/pagenav.html' %}
+
+    <div class="container" role="main" style="margin-top: 50pt;">
+        <div class="jumbotron">
+        <table style="width:100%">
+          <tr>
+            <th> Supplier Id </th>
+            <th> Price </th>
+            <th> Quantity </th>
+            <th>Date of Approval</th>
+          </tr>
+          {% for items in product %}
+          <tr>
+            <th>{{ items.s_id }}</th>
+            <th>{{ items.price }}</th>
+            <th>{{ items.quantity }}</th>
+            <th>{{items.date}}</th>
+          </tr>
+          {% endfor %}
+        </table>
+        </div>
+    </div>
+
+</body>
+</html>

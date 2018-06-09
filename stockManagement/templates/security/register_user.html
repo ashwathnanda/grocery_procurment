@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Warehouse Management</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css"/>
+    <script src="../static/js/jquery-1.11.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+</head>
+<body>
+    {% include 'includes/pagenav.html' %}
+
+    <div class="container" role="main" style="margin-top: 50pt;">
+        <div class="jumbotron">
+
+            <form action="{{ url_for_security('register') }}" method="POST" name="register_user_form">
+                {{ register_user_form.hidden_tag() }}
+
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="text" class="form-control" value="">
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" class="form-control" value="">
+
+                <label for="password_confirm">Retype Password</label>
+                <input id="password_confirm" name="password_confirm" class="form-control" type="password" value="">
+
+                <input id="submit" name="submit" type="submit" class="btn btn-success" value="Register">
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>
