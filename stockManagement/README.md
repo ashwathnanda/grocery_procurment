@@ -1,9 +1,7 @@
 Stock Management System - Flask
 =====================
 
-Purpose
-----------
-The reason I created this application was to play with python and the flask framework - While the name suggest a stockmanagement system, this application merely allows accounts to be created and login and add products and display them.
+This simple website acts as an simple warehouse managment system involving supplier,grocery dept and purchase dept.
 
 Stack
 ----------
